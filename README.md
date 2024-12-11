@@ -4,7 +4,7 @@ Summary
 
 - A project retrieves crime data for a specific location from the Police API and present this data in a user-friendly way.
 - The application uses the IP address of the users device to find the latitude and longitude of their location before using this latitude and longitude to retrieve relevant data from the Police API.
-- The application then transforms the received data and outputs it in to useful and readable format for the user.
+- The application then transforms the received data and outputs it in to a useful and readable format for the user.
 
 Real World Application
 - This application would be useful either for remote workers who change location within the UK regularly of for anyone who travels regularly within the UK.
