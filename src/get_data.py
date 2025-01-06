@@ -5,6 +5,7 @@ import socket
 
 def get_data():
     time = f'{datetime.now()}'
+    time = time[:22]
     print(f'The current date and time is {time}')
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
