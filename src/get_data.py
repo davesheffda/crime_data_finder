@@ -6,11 +6,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-def get_data():
+def get_time_string():
     time = f"{datetime.now()}"
     time = time[:19]
-    print(f"The current date and time is {time}")
+    time_string = f"The current date and time is {time}"
+    return time_string
+
+def get_data():
+    time = get_time_string()
     response = requests.get("https://api.ipify.org?format=json")
     ip_address = response.json()["ip"]
     print(f"Your IP address is {ip_address}")
