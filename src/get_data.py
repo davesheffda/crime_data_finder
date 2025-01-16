@@ -8,7 +8,7 @@ import requests
 def get_data():
     time = get_time_string()
     lat_long = get_lat_long()
-    return [time, lat_long[0], lat_long[1]]
+    return
 
 
 get_data()

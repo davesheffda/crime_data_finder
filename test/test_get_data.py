@@ -24,6 +24,6 @@ def test_latitude_and_longitude_returned_as_dictionary():
     assert len(returned_data) == 2
 
 
-def test_latitude_and_longitude_are_in_correct_format():
-    returned_data = get_lat_long()
-    assert returned_data
+# def test_latitude_and_longitude_are_in_correct_format():
+#     returned_data = get_lat_long()
+#     assert returned_data

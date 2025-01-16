@@ -11,10 +11,8 @@ def get_lat_long():
     access_token = os.getenv("ACCESS_TOKEN")
     handler = ipinfo.getHandler(access_token)
     details = handler.getDetails(ip_address)
-    print(details)
     lat_long = {}
     lat_long['lat'] = details.latitude
     lat_long['long'] = details.longitude
-    print(lat_long)
     print(f"Your latitude is -->> {lat_long['lat']}, Your longitude is -->> {lat_long['long']} ")
     return lat_long
