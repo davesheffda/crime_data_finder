@@ -16,3 +16,4 @@ def get_lat_long():
     lat_long['long'] = details.longitude
     print(f"Your latitude is -->> {lat_long['lat']}, Your longitude is -->> {lat_long['long']} ")
     return lat_long
+

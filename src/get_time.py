@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 def get_time_string():
     time = f"{datetime.now()}"
     time = time[:19]
