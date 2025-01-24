@@ -5,6 +5,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def get_lat_long():
+    '''
+    Function that uses the ipify api to return the latitude and longitude of a computer using its IP address.
+
+    '''
     response = requests.get("https://api.ipify.org?format=json")
     ip_address = response.json()["ip"]
     print(f"Your IP address is {ip_address}")
