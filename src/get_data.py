@@ -7,9 +7,11 @@ import requests
 
 
 def get_data():
-    time = get_time_string()
-    lat_long = get_lat_long()
-    force_info = get_force
+    get_time_string()
+    lat_long_ip = get_lat_long()
+    print(f"Your IP address is {lat_long_ip['ip']}")
+    print(f"Your latitude is -->> {lat_long_ip['lat']}, Your longitude is -->> {lat_long_ip['long']} ")
+    get_force()
     return
 
 
