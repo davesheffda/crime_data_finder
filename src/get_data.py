@@ -15,8 +15,8 @@ def get_data():
     get_force()
     latitude = lat_long_ip['lat']
     longitude = lat_long_ip['long']
-    response = requests.get(f"https://data.police.uk/api/crimes-street/all-crime?{latitude}&{[longitude]}")
-    crimes = response.json()
+    response = requests.get(f"https://data.police.uk/api/crimes-street/all-crime?lat={latitude}&lng={longitude}")
+    crimes = response.json()[0]
     print(crimes)
 
     return
