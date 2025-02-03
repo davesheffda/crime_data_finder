@@ -2,6 +2,7 @@ from src.get_time import get_time_string
 from src.get_lat_long import get_lat_long
 from src.get_force import get_force
 import requests
+import pprint
 
 
 import requests
@@ -16,10 +17,10 @@ def get_data():
     latitude = lat_long_ip['lat']
     longitude = lat_long_ip['long']
     response = requests.get(f"https://data.police.uk/api/crimes-street/all-crime?lat={latitude}&lng={longitude}")
-    crimes = response.json()[0]
-    print(crimes)
+    crimes = response.json()
+    print('Recent crimes street level crimes are your current location are as follows..........')
+    pprint.pp(crimes)
 
-    return
-
+    return crimes
 
 get_data()
