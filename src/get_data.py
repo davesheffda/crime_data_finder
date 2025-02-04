@@ -17,10 +17,9 @@ def get_data():
     latitude = lat_long_ip['lat']
     longitude = lat_long_ip['long']
     response = requests.get(f"https://data.police.uk/api/crimes-street/all-crime?lat={latitude}&lng={longitude}")
-    crimes = response.json()
-    print('Recent crimes street level crimes are your current location are as follows..........')
-    pprint.pp(crimes)
-
-    return crimes
+    sl_crimes = response.json()
+    pprint.pp('Recent street level crimes within a mile of your current location are.........')
+    pprint.pp(sl_crimes)
+    return sl_crimes
 
 get_data()
