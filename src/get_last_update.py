@@ -1,4 +1,4 @@
-
+import requests
 
 def get_last_update():
     '''
@@ -10,5 +10,9 @@ def get_last_update():
         get_last_update()
         # "The last time the Police API was update was 2024-11-01"
     '''
-    last_update = ''
+    response = requests.get("https://data.police.uk/api/crime-last-updated")
+    print(response.json())
+    last_update = response.dumps()
     return last_update
+
+get_last_update()
