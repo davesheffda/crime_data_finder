@@ -1,6 +1,7 @@
 from src.get_time import get_time_string
 from src.get_lat_long import get_lat_long
 from src.get_force import get_force
+from src.get_last_update import get_last_update
 import requests
 import pprint
 
@@ -9,7 +10,8 @@ import requests
 
 
 def get_data():
-    get_time_string()
+    time = get_time_string()
+    last_update = get_last_update()
     lat_long_ip = get_lat_long()
     print(f"Your IP address is {lat_long_ip['ip']}")
     print(

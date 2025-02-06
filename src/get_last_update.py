@@ -18,4 +18,3 @@ def get_last_update():
     return last_update
 
 
-get_last_update()
